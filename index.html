@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Trabalho ADS Fundamentos de Programação Web</title>
+         <!-- Fontes externas -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/>
+         <!-- Caminho para o arquivo css -->
+        <link rel="stylesheet" href="./css/styles.css" />
+    </head>
+    <body>
+        <!-- Navegação -->
+        <nav id="nav_container">
+            <ul>
+                <li>
+                    <!-- Primeiro link deve iniciar com a classe active -->
+                    <a href="#sobre" class="nav_link active">Sobre</a>
+                </li>
+                <li>
+                    <a href="#formacao" class="nav_link">Formação</a>
+                </li>
+                <li>
+                    <a href="#portfolio" class="nav_link">Portfólio</a>
+                </li>
+                <li>
+                    <a href="#contato" class="nav_link">Contato</a>
+                </li>
+            </ul>
+        </nav>
+        <main>
+            <!-- Seção sobre mim -->
+            <!-- Primeira seção deve iniciar com a classe active -->
+            <section id="sobre" class="active">
+                <div class="content">
+                    <h2 class="title">Olá, meu nome é João Pedro.</h2>
+                    <p class="description">
+                        Sou desenvolvedor web full-stack. Iniciei no mundo do
+                        desenvolvimento no final de 2022.
+                    </p>
+                    <p>
+                        Desde o início sempre fui curioso, buscando maneiras de
+                        como resolver problemas relacionados à área de
+                        desenvolvimento.
+                    </p>
+                    <p>
+                        Nos meus momentos de lazer, adoro praticar esportes como
+                        musculação e artes marciais.
+                    </p>
+                </div>
+                <div class="img">
+                    <img src="./images/sobre.svg" alt="Imagem seção sobre" />
+                </div>
+            </section>
+            <!-- Seção de formações e idiomas -->
+            <section id="formacao">
+                <div class="content">
+                    <h2 class="title">Minha formação educacional e idiomas</h2>
+                    <ul>
+                        <li>Análise e Desenvolvimento de Sistemas (UNINTER)</li>
+                        <li>
+                            NodeJs, Typescript, TDD, DDD, Clean Architecture e
+                            SOLID (Udemy)
+                        </li>
+                        <li>Inglês intermediário (Duolingo)</li>
+                    </ul>
+                </div>
+                <div class="img">
+                    <img src="./images/formacao.svg" alt="Imagem seção formacao" />
+                </div>
+            </section>
+            <!-- Seção de portfólio -->
+            <section id="portfolio">
+                <div class="content">
+                    <h2 class="title">Meu portfólio</h2>
+                    <p>Armazeno todos meus projetos pessoais e exercícios no meu perfil do github:</p>
+                    <a href="https://github.com/jpedro453?tab=repositories" target="_blank">
+                        Ver perfil do github
+                    </a>
+                </div>
+                <div class="img">
+                    <img src="./images/portfolio.svg" alt="Imagem seção portfolio" />
+                </div>
+            </section>
+            <!-- Seção de contato -->
+            <section id="contato">
+                <div class="content">
+                    <h2 class="title">Contato</h2>
+                    <p>Preencha o formulário e entre em contato comigo:</p>
+                    <!-- Formulário de contato -->
+                    <form action="#" method="post" id="form">
+                        <div class="form_group">
+                            <label for="name">Nome:</label>
+                            <input type="text" id="name" name="name" required />
+                        </div>
+                        <div class="form_group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required />
+                        </div>
+                        <div class="form_group">
+                            <label for="message">Mensagem:</label>
+                            <textarea  id="message"  name="message" rows="6" required></textarea>
+                        </div>
+                        <div class="form_group">
+                            <button id="submit_button" type="submit">
+                                Enviar mensagem
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="img">
+                    <img src="./images/contato.svg" alt="Imagem seção contato" />
+                </div>
+            </section>
+        </main>
+
+        <!-- Caminho para o arquivo js -->
+        <script src="./js/index.js"></script>
+    </body>
+</html>

@@ -1,0 +1,154 @@
+/* Configurações iniciais do css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Definição das variáveis cores */
+:root {
+    --gray-1: #ececec;
+    --gray-2: #f6f6f6;
+    --gray-3: #6d6d6d;
+
+  
+    --primary-1: #c3defa;
+    --primary-2: #4b91ec;
+    --primary-3: #3071e0;
+    --primary-4: #264ba7;
+    --primary-5: #244284;
+}
+
+body {
+    background-color: var(--gray-1);
+}
+
+#nav_container {
+    background-color: var(--gray-2);
+    padding: 16px 20px;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+#nav_container ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+#nav_container ul a {
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    color: var(--primary-4);
+    border-radius: 5px;
+    transition: 0.5s;
+}
+#nav_container ul a:hover,
+#nav_container ul a.active {
+    color: var(--primary-5);
+    background-color: var(--primary-1);
+}
+
+section {
+    display: none;
+    padding: 100px 16px 50px 16px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+section.active {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 36px;
+}
+section .content{
+    width: 100%;
+}
+section .content .title {
+    margin-bottom: 12px;
+}
+section .content p {
+    margin-bottom: 6px;
+}
+section .content ul {
+    margin-left: 16px;
+}
+section .content a {
+    text-decoration: none;
+    display: inline-block;
+    color: var(--gray-1);
+    background-color: var(--primary-3);
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-top: 16px;
+    transition: 0.5s;
+}
+section .content a:hover {
+    background-color: var(--primary-2);
+}
+section .img {
+    max-width: 450px;
+}
+section .img img {
+    max-width: 100%;
+    height: auto;
+}
+form{
+    margin-top: 32px;
+}
+form .form_group{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+form .form_group label{
+    font-weight: 600;
+}
+form .form_group input, form .form_group textarea{
+    border: 1px solid var(--gray-3);
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+}
+form .form_group input:focus, form .form_group textarea:focus{
+    outline: none;
+    border: 1px solid var(--primary-3);
+}
+form #submit_button {
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    color: var(--gray-1);
+    background-color: var(--primary-3);
+    font-weight: 600;
+    padding: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+form #submit_button:hover {
+    background-color: var(--primary-2);
+}
+/* Media query para responsividade */
+@media screen and (max-width: 992px) {
+    section.active {
+        flex-direction: column;
+    }
+}
+/* Media query para responsividade */
+@media screen and (max-width: 576px) {
+    section {
+        max-width: 95%;
+    }
+    #nav_container ul a {
+        font-size: 12px;
+    }
+}
