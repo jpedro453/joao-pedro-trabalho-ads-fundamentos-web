@@ -56,17 +56,16 @@ body {
 }
 
 section {
-    display: none;
-    padding: 100px 16px 50px 16px;
-    max-width: 80%;
+    padding: 70px 20px;
     margin: 0 auto;
-}
-
-section.active {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 36px;
+}
+section:nth-child(2), section:nth-child(4) {
+    background-color: var(--gray-2);
+    flex-direction: row-reverse;
 }
 section .content{
     width: 100%;
@@ -139,7 +138,7 @@ form #submit_button:hover {
 }
 /* Media query para responsividade */
 @media screen and (max-width: 992px) {
-    section.active {
+    section, section:nth-child(2), section:nth-child(4) {
         flex-direction: column;
     }
 }
